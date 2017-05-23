@@ -1,12 +1,12 @@
 ## Questions
 
-* Which vendor had the most trips? How many trips were taken?
+* Question 1 - Which vendor had the most trips? How many trips were taken?
     * vendor\_id = 2
     * trip\_count = 1050518
-* Which payment type had the highest average fare?
+* Question 2 - Which payment type had the highest average fare?
     * payment\_type = 1
     * average\_fare = 15.24
-* Estimate the charged rate for each RateCodeID. (For this question, assume rates are only charged based on distance. )<br><br>
+* Question 3 - Estimate the charged rate for each RateCodeID. (For this question, assume rates are only charged based on distance. )<br><br>
     rate\_code\_id, estimated\_rate\_per\_mile<br>
     1, 5.44<br>
     2, 561.34<br>
@@ -18,11 +18,11 @@
     * Average fare for rate codes 2, 3 and 5 look higher than I would've expected.
     * Since the question says rates are only charged based on distances, $0 and negative fares have been removed in addition to trips with distances of 0.
 
-* What was the average difference between the driven distance and the haversine distance of the trip?
+* Question 4 - What was the average difference between the driven distance and the haversine distance of the trip?
     * average\_distance\_difference = .900
 
-* Are there any patterns with tipping over time? If you find one, please provide a possible explanation!
-#### Process
+* Question 5 - Are there any patterns with tipping over time? If you find one, please provide a possible explanation!
+   #### Process
     * Trips without $0 or negative dollar fares were excludes as were trips with 0 distance.
 
     * After pivoting data to show average tip per hour per day of week the query results were exported to Excel and high-low conditional formatting was applied.
@@ -39,8 +39,8 @@
 
     * Riders between 5 and 7 AM on weekdays tip more on the last week of the month. This could be because they're closest to payday.
 
-* Can you predict the length of the trip based on factors that are known at pick-up? How might you use this information?
-#### Process
+* Question 6 - Can you predict the length of the trip based on factors that are known at pick-up? How might you use this information?
+   #### Process
     * Similar to the prior question. Average trip length for each hour of each day for the month was calculated and then compared for consistency for each hour for each day of the week (ex. Tuesdays at 2pm).
 
     #### Solution
@@ -48,7 +48,7 @@
 
     * Having this information along with number of rides would influence how I could deploy a fleet of drivers. Knowing demand and average ride length would tell us availability of drivers and ultimately how many drivers we would need at a given hour.
 
-* Get creative! Present any interesting trends, patterns, or predictions that you notice about this dataset.
+* Question 7 - Get creative! Present any interesting trends, patterns, or predictions that you notice about this dataset.
 
     ##### Are there higher passenger counts on average at certain times during the week? Are there enough passengers that larger vehicles are needed?
 
